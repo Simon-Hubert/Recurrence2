@@ -49,3 +49,39 @@ MonoBehaviour:
     _name: Spear
     o_sprite: {fileID: 0}
     _material: 2
+  - _price: 80
+    _name: sword
+    o_sprite: {fileID: 0}
+    _material: 3
+  - _price: 120
+    _name: Shield
+    o_sprite: {fileID: 0}
+    _material: 3
+  - _price: 40
+    _name: Spear
+    o_sprite: {fileID: 0}
+    _material: 3
+  - _price: 160
+    _name: Sword
+    o_sprite: {fileID: 0}
+    _material: 4
+  - _price: 240
+    _name: Shield
+    o_sprite: {fileID: 0}
+    _material: 4
+  - _price: 80
+    _name: Spear
+    o_sprite: {fileID: 0}
+    _material: 4
+  - _price: 320
+    _name: Sword
+    o_sprite: {fileID: 0}
+    _material: 5
+  - _price: 480
+    _name: Shield
+    o_sprite: {fileID: 0}
+    _material: 5
+  - _price: 160
+    _name: Spear
+    o_sprite: {fileID: 0}
+    _material: 5

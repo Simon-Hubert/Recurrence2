@@ -10,6 +10,7 @@ public class ObjectController : MonoBehaviour
     string _name;
     SpriteRenderer o_sprite;
     MaterialType _material;
+    List<ObjectData> _goodObjects = new List<ObjectData>();
 
     public int Price { get => _price; private set => _price = value; }
     public string Name { get => _name; private set => _name = value; }
@@ -22,7 +23,25 @@ public class ObjectController : MonoBehaviour
 
     void Init(MaterialType _material)
     {
-        do
+        Debug.Log("Init" + _material);
+        SetList(_material);
+
+        if (_goodObjects.Count > 0)
+        {
+            int rdm = Random.Range(0, _goodObjects.Count);
+            _data = _goodObjects[rdm];
+            Price = _data.Price;
+            Name = _data.Name_O;
+            O_sprite = _data.O_sprite;
+            Material = _data.Material;
+
+            Debug.Log(_data.Name_O + " " + _data.Material.ToString());
+        }
+        else
+        {
+            Debug.LogError("No good objects found for the specified material.");
+        }
+        /*do
         {
             Debug.Log("Init");
             int rdm = Random.Range(0, DatabaseManager.Instance.ObjectDatabase.Data.Count);
@@ -31,8 +50,21 @@ public class ObjectController : MonoBehaviour
             Name = _data.Name_O;
             O_sprite = _data.O_sprite;
             Material = _data.Material;
-        }while(_data.Material != _material);
+            
+        }while(_data.Material != _material);*/
 
-        Debug.Log(_data.Name_O + " " + _data.Material.ToString());
+
+
+    }
+    void SetList(MaterialType _material)
+    {
+        _goodObjects.Clear();
+        foreach(ObjectData obj in DatabaseManager.Instance.ObjectDatabase.Data)
+        {
+            if (obj.Material == _material)
+            {
+                _goodObjects.Add(obj);
+            }
+        }
     }
 }
