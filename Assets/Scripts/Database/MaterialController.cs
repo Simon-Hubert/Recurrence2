@@ -11,11 +11,14 @@ public class MaterialController : MonoBehaviour
     private int _defense;
     private MaterialType _materialName;
     private Material m_material;
+    private bool _locked;
+    List<MaterialData> _unlockedMaterials = new List<MaterialData>();
 
     public int Health { get => _health; private set => _health = value; }
     public int Defense { get => _defense; private set => _defense = value; }
     public MaterialType Name { get => _materialName; private set => _materialName = value; }
     public Material Material { get => m_material; private set => m_material = value; }
+    public bool Locked { get => _locked; set => _locked = value; }
 
     //private SpriteRenderer _spriteRenderer;
 
@@ -24,16 +27,32 @@ public class MaterialController : MonoBehaviour
     }
 
     private void Start() {
-        Init();
+        UpdateListMaterial();
+        InitNewMaterial(new MaterialType());
+        _gameManager.OnEnd += InitNewMaterial;
+        Debug.Log(_unlockedMaterials[0].Name);
+        Debug.Log(_unlockedMaterials[1].Name);
+        Debug.Log(_unlockedMaterials[2].Name);
     }
 
 
-    public void Init(){
-        int rng = Random.Range(0, DatabaseManager.Instance.MaterialDatabase.Data.Count);
-        _data = DatabaseManager.Instance.MaterialDatabase.Data[rng];
+    public void InitNewMaterial(MaterialType materialType){
+        int rng = Random.Range(0, _unlockedMaterials.Count);
+        _data = _unlockedMaterials[rng];
         Health = _data.Health;
         Defense = _data.Defense;
         Name = _data.Name;
         Material = _data.Material;
+        Locked = _data.Locked;
+    }
+    private void UpdateListMaterial()
+    {
+        foreach(MaterialData material in DatabaseManager.Instance.MaterialDatabase.Data)
+        {
+            if (material.Locked)
+            {
+                _unlockedMaterials.Add(material);
+            }
+        }
     }
 }

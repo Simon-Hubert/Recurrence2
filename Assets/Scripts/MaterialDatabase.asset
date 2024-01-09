@@ -15,13 +15,31 @@ MonoBehaviour:
   _data:
   - _health: 50
     _defense: 25
-    _name: 1
     m_material: {fileID: 0}
+    _name: 1
+    locked: 0
   - _health: 100
     _defense: 35
-    _name: 2
     m_material: {fileID: 0}
+    _name: 2
+    locked: 0
   - _health: 40
     _defense: 10
-    _name: 0
     m_material: {fileID: 0}
+    _name: 0
+    locked: 0
+  - _health: 40
+    _defense: 10
+    m_material: {fileID: 0}
+    _name: 3
+    locked: 1
+  - _health: 40
+    _defense: 10
+    m_material: {fileID: 0}
+    _name: 4
+    locked: 1
+  - _health: 40
+    _defense: 10
+    m_material: {fileID: 0}
+    _name: 5
+    locked: 1
