@@ -13,43 +13,39 @@ MonoBehaviour:
   m_Name: Object_Database
   m_EditorClassIdentifier: 
   _data:
-  - _price: 0
+  - _price: 10
     _name: Sword
     o_sprite: {fileID: 0}
     _material: 0
-  - _price: 0
+  - _price: 15
     _name: Shield
     o_sprite: {fileID: 0}
     _material: 0
-  - _price: 0
+  - _price: 5
     _name: Spear
     o_sprite: {fileID: 0}
     _material: 0
-  - _price: 0
+  - _price: 20
     _name: Sword
     o_sprite: {fileID: 0}
-    _material: 0
-  - _price: 0
+    _material: 1
+  - _price: 30
     _name: Shield
     o_sprite: {fileID: 0}
-    _material: 0
-  - _price: 0
+    _material: 1
+  - _price: 10
     _name: Spear
     o_sprite: {fileID: 0}
-    _material: 0
-  - _price: 0
-    _name: 
+    _material: 1
+  - _price: 40
+    _name: Sword
     o_sprite: {fileID: 0}
-    _material: 0
-  - _price: 0
-    _name: 
+    _material: 2
+  - _price: 60
+    _name: Shield
     o_sprite: {fileID: 0}
-    _material: 0
-  - _price: 0
-    _name: 
+    _material: 2
+  - _price: 20
+    _name: Spear
     o_sprite: {fileID: 0}
-    _material: 0
-  - _price: 0
-    _name: 
-    o_sprite: {fileID: 0}
-    _material: 0
+    _material: 2

@@ -24,6 +24,7 @@ public class ObjectController : MonoBehaviour
     {
         do
         {
+            Debug.Log("Init");
             int rdm = Random.Range(0, DatabaseManager.Instance.ObjectDatabase.Data.Count);
             _data = DatabaseManager.Instance.ObjectDatabase.Data[rdm];
             Price = _data.Price;
@@ -31,5 +32,7 @@ public class ObjectController : MonoBehaviour
             O_sprite = _data.O_sprite;
             Material = _data.Material.ToString();
         }while(_data.Material.ToString() != _material);
+
+        Debug.Log(_data.Name_O + " " + _data.Material.ToString());
     }
 }
