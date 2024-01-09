@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class MaterialController : MonoBehaviour
 {
+    [SerializeField] GameManager _gameManager;
     private MaterialData _data;
 
     private int _health;
     private int _defense;
-    private string _name;
+    private MaterialType _materialName;
     private Material m_material;
 
     public int Health { get => _health; private set => _health = value; }
     public int Defense { get => _defense; private set => _defense = value; }
-    public string Name { get => _name; private set => _name = value; }
+    public MaterialType Name { get => _materialName; private set => _materialName = value; }
     public Material Material { get => m_material; private set => m_material = value; }
 
     //private SpriteRenderer _spriteRenderer;

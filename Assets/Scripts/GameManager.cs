@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] MaterialController _mc;
     private int _prog = 0;
     private float _timer = 0;
-    public event Action<string> OnEnd;
+    public event Action<MaterialType> OnEnd;
 
     private void Update() {
         _timer += Time.deltaTime;
