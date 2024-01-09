@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] MaterialController _mc;
     private int _prog = 0;
     private float _timer = 0;
+    public event Action<string> OnEnd;
 
     private void Update() {
         _timer += Time.deltaTime;
@@ -35,6 +37,7 @@ public class GameManager : MonoBehaviour
     }
 
     private void ReInit(){
+        OnEnd?.Invoke(_mc.Name);
         _mc.Init();
         _prog = 0;
         _progress.value = 0f;

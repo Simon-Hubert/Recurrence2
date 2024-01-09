@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu(menuName = "Database")]
+[CreateAssetMenu(menuName = "Database_M")]
 public class MaterialDatabase : ScriptableObject {
     [SerializeField] private List<MaterialData> _data = new();
 
