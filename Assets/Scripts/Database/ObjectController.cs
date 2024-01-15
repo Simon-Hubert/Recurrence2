@@ -19,7 +19,7 @@ public class ObjectController : MonoBehaviour
     public MaterialType Material { get => _material; set => _material = value; }
     private void Awake()
     {
-        _gameManager.OnEnd += Init;
+        _gameManager.OnEndWin += Init;
     }
 
     void Init(MaterialType _material)
