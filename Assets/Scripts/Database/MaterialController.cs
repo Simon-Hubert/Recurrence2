@@ -49,7 +49,7 @@ public class MaterialController : MonoBehaviour
     {
         foreach(MaterialData material in DatabaseManager.Instance.MaterialDatabase.Data)
         {
-            if (material.Locked)
+            if (!material.Locked)
             {
                 _unlockedMaterials.Add(material);
             }

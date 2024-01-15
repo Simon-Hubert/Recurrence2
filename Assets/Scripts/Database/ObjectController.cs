@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ObjectController : MonoBehaviour
 {
@@ -8,13 +9,13 @@ public class ObjectController : MonoBehaviour
     ObjectData _data;
     int _price;
     string _name;
-    SpriteRenderer o_sprite;
+    Sprite o_sprite;
     MaterialType _material;
     List<ObjectData> _goodObjects = new List<ObjectData>();
 
     public int Price { get => _price; private set => _price = value; }
     public string Name { get => _name; private set => _name = value; }
-    public SpriteRenderer O_sprite { get => o_sprite; private set => o_sprite = value; }
+    public Sprite O_sprite { get => o_sprite; private set => o_sprite = value; }
     public MaterialType Material { get => _material; set => _material = value; }
     private void Awake()
     {
@@ -35,6 +36,7 @@ public class ObjectController : MonoBehaviour
             O_sprite = _data.O_sprite;
             Material = _data.Material;
 
+            InventoryManager.Instance.AddObject(_data);
             Debug.Log(_data.Name_O + " " + _data.Material.ToString());
         }
         else
