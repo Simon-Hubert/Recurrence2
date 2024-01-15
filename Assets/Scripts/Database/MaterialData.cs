@@ -11,6 +11,7 @@ public enum MaterialType
     Gold,
     Diamond,
     Obsidian,
+    NumberOfTypes
 }
 [Serializable]
 public class MaterialData
@@ -27,4 +28,5 @@ public class MaterialData
     public Material Material { get => m_material; set => m_material = value; }
     public MaterialType Name { get => _name; set => _name = value; }
     public bool Locked { get => locked; set => locked = value; }
+    
 }

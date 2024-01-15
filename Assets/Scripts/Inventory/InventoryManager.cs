@@ -52,7 +52,7 @@ public class InventoryManager : MonoBehaviour
             var _itemIcon = _objectUI.transform.Find("ItemIcon").GetComponent<Image>();
             var _sellingButton = _objectUI.transform.Find("Selling").GetComponent<Button>();
 
-            _itemName.text = _object.Name_O;
+            _itemName.text = _object.Name_O.ToString();
             _itemIcon.sprite = _object.O_sprite;
 
             if(EnableSelling.isOn)
