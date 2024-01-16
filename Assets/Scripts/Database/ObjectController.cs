@@ -37,7 +37,7 @@ public class ObjectController : MonoBehaviour
             Name = _data.Name_O;
             O_sprite = _data.O_sprite;
             Material = _data.Material;
-            Locked_OC = _data.Locked_O;
+            Locked_OC = _data.Locked;
 
             InventoryManager.Instance.AddObject(_data);
             Debug.Log(_data.Name_O + " " + _data.Material.ToString());
@@ -66,7 +66,7 @@ public class ObjectController : MonoBehaviour
         _goodObjects.Clear();
         foreach(ObjectData obj in DatabaseManager.Instance.ObjectDatabase.Data)
         {
-            if (obj.Material == _material && !obj.Locked_O)
+            if (obj.Material == _material && !obj.Locked)
             {
                 _goodObjects.Add(obj);
             }

@@ -13,12 +13,16 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] Transform _inventoryContent;
     [SerializeField] Toggle EnableSelling;
     [SerializeField] InventoryItemController[] _inventoryItems;
+    [SerializeField] TextMeshProUGUI _money;
+    
+    int _moneyCount = 0;
 
     private void Awake()
     {
         if(Instance == null)
         {
             Instance = this;
+            _money.text = _moneyCount.ToString();
         }
         else
         {
@@ -32,9 +36,11 @@ public class InventoryManager : MonoBehaviour
         Debug.Log("Added " + _object.Name_O + " to inventory");
     }
 
-    public void RemoveObject(ObjectData _object)
+    public void SellObject(ObjectData _object)
     {
+        _moneyCount += _object.Price;
         objectInInventory.Remove(_object);
+        _money.text = _moneyCount.ToString();
     }
 
     public void ListItems()

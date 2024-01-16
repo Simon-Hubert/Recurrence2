@@ -8,5 +8,13 @@ public class MaterialDatabase : ScriptableObject {
     [SerializeField] private List<MaterialData> _data = new();
 
     public List<MaterialData> Data { get => _data;}
+
+    private void OnValidate()
+    {
+        foreach(MaterialData data in _data)
+        {
+            data.Label = data.Name.ToString();
+        }
+    }
 }
 

@@ -8,9 +8,9 @@ public class InventoryItemController : MonoBehaviour
     ObjectData _object;
     [SerializeField] Button SellingButton;
 
-    public void RemoveItem()
+    public void SellItem()
     {
-        InventoryManager.Instance.RemoveObject(_object);
+        InventoryManager.Instance.SellObject(_object);
         Destroy(gameObject);
     }
     

@@ -23,9 +23,10 @@ public class ObjectDatabase : ScriptableObject
                 data.Material = (MaterialType)j;
                 if((int)data.Material >= (int)MaterialType.Gold || (int)data.Name_O >= (int)ObjectType.Arrow)
                 {
-                    data.Locked_O = true;
+                    data.Locked = true;
                 }
-                data.Price = basePrice * 2 *(int)ObjectType.NumberOfTypes;
+                data.Label = data.Name_O.ToString()+"_"+data.Material.ToString();
+                data.Price = basePrice * (j+1) *(int)ObjectType.NumberOfTypes * (i+1);
                 _data.Add(data);
                 
             }
