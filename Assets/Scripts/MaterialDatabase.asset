@@ -13,33 +13,51 @@ MonoBehaviour:
   m_Name: MaterialDatabase
   m_EditorClassIdentifier: 
   _data:
-  - _health: 50
-    _defense: 25
-    m_material: {fileID: 0}
-    _name: 1
-    locked: 0
-  - _health: 100
-    _defense: 35
-    m_material: {fileID: 0}
-    _name: 2
-    locked: 0
-  - _health: 40
+  - _price: 1000
+    _health: 50
     _defense: 10
     m_material: {fileID: 0}
     _name: 0
     locked: 0
-  - _health: 40
-    _defense: 10
+    _label: Steel
+    _sprite: {fileID: 0}
+  - _price: 2000
+    _health: 100
+    _defense: 20
+    m_material: {fileID: 0}
+    _name: 1
+    locked: 0
+    _label: Copper
+    _sprite: {fileID: 0}
+  - _price: 3000
+    _health: 150
+    _defense: 30
+    m_material: {fileID: 0}
+    _name: 2
+    locked: 0
+    _label: Iron
+    _sprite: {fileID: 0}
+  - _price: 4000
+    _health: 200
+    _defense: 40
     m_material: {fileID: 0}
     _name: 3
     locked: 1
-  - _health: 40
-    _defense: 10
+    _label: Gold
+    _sprite: {fileID: 0}
+  - _price: 5000
+    _health: 250
+    _defense: 50
     m_material: {fileID: 0}
     _name: 4
     locked: 1
-  - _health: 40
-    _defense: 10
+    _label: Diamond
+    _sprite: {fileID: 0}
+  - _price: 6000
+    _health: 300
+    _defense: 60
     m_material: {fileID: 0}
     _name: 5
     locked: 1
+    _label: Obsidian
+    _sprite: {fileID: 0}

@@ -37,6 +37,7 @@ public class MaterialController : MonoBehaviour
 
 
     public void InitNewMaterial(MaterialType materialType){
+        UpdateListMaterial();
         int rng = Random.Range(0, _unlockedMaterials.Count);
         _data = _unlockedMaterials[rng];
         Health = _data.Health;
@@ -47,6 +48,7 @@ public class MaterialController : MonoBehaviour
     }
     private void UpdateListMaterial()
     {
+        _unlockedMaterials.Clear();
         foreach(MaterialData material in DatabaseManager.Instance.MaterialDatabase.Data)
         {
             if (!material.Locked)

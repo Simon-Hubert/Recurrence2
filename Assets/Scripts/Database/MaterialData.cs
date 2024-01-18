@@ -16,7 +16,7 @@ public enum MaterialType
 [Serializable]
 public class MaterialData: IData
 {
-    
+    [SerializeField] int _price;
     [SerializeField] int _health;
     [SerializeField] int _defense;
     [SerializeField] Material m_material;
@@ -32,5 +32,5 @@ public class MaterialData: IData
     public bool Locked { get => locked; set => locked = value; }
     public string Label { get => _label; set => _label = value; }
     public Sprite O_sprite { get => _sprite; set => _sprite = value; }
-
+    public int Price { get => _price; set => _price = value; }
 }
