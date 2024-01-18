@@ -3,9 +3,9 @@ Shader "Unlit/HeatMaterial"
     Properties
     {
         _NoiseTex ("Noise Texture", 2D) = "white" {}
-        _ColorTex ("Color Texture", 2D) = "white" {}
+        _VoronoiTex ("Voronoi Texture", 2D) = "white" {}
         _GradientTex ("Gradient Texture", 2D) = "white" {}
-        _Health ("Health", range(0,1)) = 1
+        _Heat ("Heat", range(0,1)) = 1
         _BorderSize("BorderSize", Range(0,0.5)) = 0.1
     }
     SubShader
@@ -35,9 +35,9 @@ Shader "Unlit/HeatMaterial"
                 float2 uv : TEXCOORD0;
             };
 
-            sampler2D _NoiseTex, _ColorTex, _GradientTex;
-            float4 _NoiseTex_ST;
-            float _Health, _BorderSize;
+            sampler2D _NoiseTex, _VoronoiTex, _GradientTex;
+            float4 _NoiseTex_ST, _VoronoiTex_ST;
+            float _Heat, _BorderSize;
 
             Interpolators vert (MeshData v)
             {
@@ -66,8 +66,13 @@ Shader "Unlit/HeatMaterial"
                 return float4(lerp(col, float3(1.,.5,0.), L2), step(y, x));
             }
 
+            float ice(float2 uv){
+                float col = tex2D(_VoronoiTex, uv*_VoronoiTex_ST.xy + _VoronoiTex_ST.zw);
+                return col - 0.02;
+            }
+
             fixed4 frag (Interpolators i) : SV_Target
-            {
+            { 
                 float2 coords = i.uv;
                 coords.x *= 8;
 
@@ -79,12 +84,20 @@ Shader "Unlit/HeatMaterial"
                 float pd = fwidth(borderSdf);
                 float borderMask = 1-saturate(borderSdf/pd);
 
-                float healthBarMask = _Health > i.uv.x;
-                float3 healthBarColor = tex2D(_ColorTex, float2(_Health, i.uv.y));
+                float healthBarMask = _Heat > i.uv.x;
+                float3 healthBarColor = lerp(float3(0.,.7,1.), float3(1.,.2,0.), _Heat);
+
+                float4 crack = ice(i.uv);
+                crack += ice(i.uv*.2 + 0.5)/2.;
+                crack += ice(i.uv*.8 + 0.4)/4.;
+                crack += ice(i.uv*1.5 + .9)/8.;
 
                 //return float4(fire(i.uv)*healthBarMask,0,0,1);
                 float4 f = fire(i.uv);
-                return float4((healthBarColor+f.xyz*f.w)* healthBarMask * borderMask, 1); 
+
+                float3 effect = saturate(lerp(float3(0.,0.,0.), f.xyz*f.w, (_Heat-.5)*2));
+                effect += saturate(lerp(crack, float3(0.,0.,0.), _Heat*2));
+                return float4((healthBarColor+effect)* healthBarMask * borderMask, 1); 
             }
             ENDCG
         }
