@@ -14,6 +14,7 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] Toggle EnableSelling;
     [SerializeField] InventoryItemController[] _inventoryItems;
     [SerializeField] TextMeshProUGUI _money;
+    [SerializeField] MVO _mvo;
     
     [SerializeField] int _moneyCount = 0;
 
@@ -40,7 +41,21 @@ public class InventoryManager : MonoBehaviour
 
     public void SellObject(ObjectData _object)
     {
-        MoneyCount += _object.Price;
+        int bonus = 1;
+        if(_object.Name_O.ToString() == _mvo.MvoName)
+        {
+            int sup = Random.Range(0, 4);
+            if(sup > 2 )
+            {
+                bonus = 3;
+            }
+            else
+            {
+                bonus = 2;
+            }
+        }
+        MoneyCount += _object.Price * bonus;
+        Debug.Log(_object.Label + " " + _object.Price + " " + _object.Price * bonus);
         objectInInventory.Remove(_object);
         _money.text = MoneyCount.ToString();
     }

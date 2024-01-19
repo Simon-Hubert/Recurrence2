@@ -19,6 +19,8 @@ public class ObjectController : MonoBehaviour
     public Sprite O_sprite { get => o_sprite; private set => o_sprite = value; }
     public MaterialType Material { get => _material; set => _material = value; }
     public bool Locked_OC { get => _locked; set => _locked = value; }
+    public List<ObjectData> GoodObjects { get => _goodObjects; set => _goodObjects = value; }
+
     private void Awake()
     {
         _gameManager.OnEndWin += Init;
@@ -29,10 +31,10 @@ public class ObjectController : MonoBehaviour
         Debug.Log("Init" + _material);
         SetList(_material);
 
-        if (_goodObjects.Count > 0)
+        if (GoodObjects.Count > 0)
         {
-            int rdm = Random.Range(0, _goodObjects.Count);
-            _data = _goodObjects[rdm];
+            int rdm = Random.Range(0, GoodObjects.Count);
+            _data = GoodObjects[rdm];
             Price = _data.Price;
             Name = _data.Name_O;
             O_sprite = _data.O_sprite;
@@ -63,12 +65,12 @@ public class ObjectController : MonoBehaviour
     }
     void SetList(MaterialType _material)
     {
-        _goodObjects.Clear();
+        GoodObjects.Clear();
         foreach(ObjectData obj in DatabaseManager.Instance.ObjectDatabase.Data)
         {
             if (obj.Material == _material && !obj.Locked)
             {
-                _goodObjects.Add(obj);
+                GoodObjects.Add(obj);
             }
         }
     }
