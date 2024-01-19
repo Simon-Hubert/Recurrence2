@@ -1,0 +1,195 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e383349fb2d553141bfbf636d15200a8, type: 3}
+  m_Name: Object_Database
+  m_EditorClassIdentifier: 
+  _data:
+  - _label: Sword_Steel
+    _name: 0
+    _price: 25
+    o_sprite: {fileID: 0}
+    _material: 0
+    locked: 0
+  - _label: Sword_Copper
+    _name: 0
+    _price: 50
+    o_sprite: {fileID: 0}
+    _material: 1
+    locked: 0
+  - _label: Sword_Iron
+    _name: 0
+    _price: 75
+    o_sprite: {fileID: 0}
+    _material: 2
+    locked: 0
+  - _label: Sword_Gold
+    _name: 0
+    _price: 100
+    o_sprite: {fileID: 0}
+    _material: 3
+    locked: 1
+  - _label: Sword_Diamond
+    _name: 0
+    _price: 125
+    o_sprite: {fileID: 0}
+    _material: 4
+    locked: 1
+  - _label: Sword_Obsidian
+    _name: 0
+    _price: 150
+    o_sprite: {fileID: 0}
+    _material: 5
+    locked: 1
+  - _label: Shield_Steel
+    _name: 1
+    _price: 50
+    o_sprite: {fileID: 0}
+    _material: 0
+    locked: 0
+  - _label: Shield_Copper
+    _name: 1
+    _price: 100
+    o_sprite: {fileID: 0}
+    _material: 1
+    locked: 0
+  - _label: Shield_Iron
+    _name: 1
+    _price: 150
+    o_sprite: {fileID: 0}
+    _material: 2
+    locked: 0
+  - _label: Shield_Gold
+    _name: 1
+    _price: 200
+    o_sprite: {fileID: 0}
+    _material: 3
+    locked: 1
+  - _label: Shield_Diamond
+    _name: 1
+    _price: 250
+    o_sprite: {fileID: 0}
+    _material: 4
+    locked: 1
+  - _label: Shield_Obsidian
+    _name: 1
+    _price: 300
+    o_sprite: {fileID: 0}
+    _material: 5
+    locked: 1
+  - _label: Spear_Steel
+    _name: 2
+    _price: 75
+    o_sprite: {fileID: 0}
+    _material: 0
+    locked: 0
+  - _label: Spear_Copper
+    _name: 2
+    _price: 150
+    o_sprite: {fileID: 0}
+    _material: 1
+    locked: 0
+  - _label: Spear_Iron
+    _name: 2
+    _price: 225
+    o_sprite: {fileID: 0}
+    _material: 2
+    locked: 0
+  - _label: Spear_Gold
+    _name: 2
+    _price: 300
+    o_sprite: {fileID: 0}
+    _material: 3
+    locked: 1
+  - _label: Spear_Diamond
+    _name: 2
+    _price: 375
+    o_sprite: {fileID: 0}
+    _material: 4
+    locked: 1
+  - _label: Spear_Obsidian
+    _name: 2
+    _price: 450
+    o_sprite: {fileID: 0}
+    _material: 5
+    locked: 1
+  - _label: Arrow_Steel
+    _name: 3
+    _price: 100
+    o_sprite: {fileID: 0}
+    _material: 0
+    locked: 1
+  - _label: Arrow_Copper
+    _name: 3
+    _price: 200
+    o_sprite: {fileID: 0}
+    _material: 1
+    locked: 1
+  - _label: Arrow_Iron
+    _name: 3
+    _price: 300
+    o_sprite: {fileID: 0}
+    _material: 2
+    locked: 1
+  - _label: Arrow_Gold
+    _name: 3
+    _price: 400
+    o_sprite: {fileID: 0}
+    _material: 3
+    locked: 1
+  - _label: Arrow_Diamond
+    _name: 3
+    _price: 500
+    o_sprite: {fileID: 0}
+    _material: 4
+    locked: 1
+  - _label: Arrow_Obsidian
+    _name: 3
+    _price: 600
+    o_sprite: {fileID: 0}
+    _material: 5
+    locked: 1
+  - _label: Claymore_Steel
+    _name: 4
+    _price: 125
+    o_sprite: {fileID: 0}
+    _material: 0
+    locked: 1
+  - _label: Claymore_Copper
+    _name: 4
+    _price: 250
+    o_sprite: {fileID: 0}
+    _material: 1
+    locked: 1
+  - _label: Claymore_Iron
+    _name: 4
+    _price: 375
+    o_sprite: {fileID: 0}
+    _material: 2
+    locked: 1
+  - _label: Claymore_Gold
+    _name: 4
+    _price: 500
+    o_sprite: {fileID: 0}
+    _material: 3
+    locked: 1
+  - _label: Claymore_Diamond
+    _name: 4
+    _price: 625
+    o_sprite: {fileID: 0}
+    _material: 4
+    locked: 1
+  - _label: Claymore_Obsidian
+    _name: 4
+    _price: 750
+    o_sprite: {fileID: 0}
+    _material: 5
+    locked: 1

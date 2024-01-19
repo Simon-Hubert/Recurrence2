@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,12 +14,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] MaterialController _mc;
     private int _prog = 0;
     private float _timer = 0;
+    public event Action<MaterialType> OnEnd;
+    public event Action<MaterialType> OnEndWin;
 
     private void Update() {
         _timer += Time.deltaTime;
         if(_timer >= _time){
             Debug.Log("You lose !");
-            ReInit();
+            ReInitLose();
         }
         else{
             _heat.value = 1f-(_timer/_time);
@@ -35,7 +38,15 @@ public class GameManager : MonoBehaviour
     }
 
     private void ReInit(){
-        _mc.Init();
+        OnEnd?.Invoke(_mc.Name);
+        OnEndWin?.Invoke(_mc.Name);
+        _prog = 0;
+        _progress.value = 0f;
+        _timer = 0;
+    }
+    private void ReInitLose()
+    {
+        OnEnd?.Invoke(_mc.Name);
         _prog = 0;
         _progress.value = 0f;
         _timer = 0;
