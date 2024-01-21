@@ -14,8 +14,195 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spritesInOrder:
   - {fileID: 21300000, guid: 09e9060d834ac7d49a821e99d1b693fc, type: 3}
+  - {fileID: 21300000, guid: f6cc0a5571d5fd946b3053aef1a1cfbd, type: 3}
+  - {fileID: 21300000, guid: b4ee0cc0dae81d64999558e373c38aae, type: 3}
+  - {fileID: 21300000, guid: 92fd2a7bb587dcf408831d750a949737, type: 3}
+  - {fileID: 21300000, guid: 0baea1bf6750ef64ba7bd533a02e2095, type: 3}
   _colorsInOrder:
-  - {r: 0, g: 0, b: 0, a: 1}
-  - {r: 0.96981126, g: 0.897788, b: 0.07868272, a: 1}
-  - {r: 0.96862745, g: 0.1027665, b: 0.07843137, a: 1}
-  _data: []
+  - {r: 0.5698112, g: 0.5698112, b: 0.5698112, a: 1}
+  - {r: 0.81886786, g: 0.31592533, b: 0, a: 1}
+  - {r: 0.6377357, g: 0.27340844, b: 0.2635172, a: 1}
+  - {r: 0.7584905, g: 0.61056995, b: 0.1703025, a: 1}
+  - {r: 0.35846907, g: 0.88964564, b: 0.9547169, a: 1}
+  - {r: 0.3132075, g: 0.13178352, b: 0.26810446, a: 1}
+  _data:
+  - _label: Sword_Steel
+    _name: 0
+    _price: 25
+    o_sprite: {fileID: 21300000, guid: 1dfcba933bc25e2448497556e2480253, type: 3}
+    _material: 0
+    locked: 0
+  - _label: Sword_Copper
+    _name: 0
+    _price: 50
+    o_sprite: {fileID: 21300000, guid: d5eb36f9e30f01d4d9aef7f99d8c437d, type: 3}
+    _material: 1
+    locked: 0
+  - _label: Sword_Iron
+    _name: 0
+    _price: 75
+    o_sprite: {fileID: 21300000, guid: 03f3e8e19d29f664a934fa14776ba428, type: 3}
+    _material: 2
+    locked: 0
+  - _label: Sword_Gold
+    _name: 0
+    _price: 100
+    o_sprite: {fileID: 21300000, guid: a5ad9a214544b6745a8c52eee10d9136, type: 3}
+    _material: 3
+    locked: 1
+  - _label: Sword_Diamond
+    _name: 0
+    _price: 125
+    o_sprite: {fileID: 21300000, guid: 462bba2ede9b58c49b8476c0eed6fc7b, type: 3}
+    _material: 4
+    locked: 1
+  - _label: Sword_Obsidian
+    _name: 0
+    _price: 150
+    o_sprite: {fileID: 21300000, guid: 6a7b62f3ce179bf4d9d50d69042d7ffe, type: 3}
+    _material: 5
+    locked: 1
+  - _label: Shield_Steel
+    _name: 1
+    _price: 50
+    o_sprite: {fileID: 21300000, guid: 2f3d72a9d5f82de4592b6736486b00ea, type: 3}
+    _material: 0
+    locked: 0
+  - _label: Shield_Copper
+    _name: 1
+    _price: 100
+    o_sprite: {fileID: 21300000, guid: 2c0df1308858a794aa381dc542742f3e, type: 3}
+    _material: 1
+    locked: 0
+  - _label: Shield_Iron
+    _name: 1
+    _price: 150
+    o_sprite: {fileID: 21300000, guid: 8498ed06c70e8524286c78d5ebc720a2, type: 3}
+    _material: 2
+    locked: 0
+  - _label: Shield_Gold
+    _name: 1
+    _price: 200
+    o_sprite: {fileID: 21300000, guid: 5ac157936dceaa647aa86cc62888facc, type: 3}
+    _material: 3
+    locked: 1
+  - _label: Shield_Diamond
+    _name: 1
+    _price: 250
+    o_sprite: {fileID: 21300000, guid: 422a1dc10f13c634daaca90afda5cc32, type: 3}
+    _material: 4
+    locked: 1
+  - _label: Shield_Obsidian
+    _name: 1
+    _price: 300
+    o_sprite: {fileID: 21300000, guid: c6ba5ee3a90feba488330236b3333569, type: 3}
+    _material: 5
+    locked: 1
+  - _label: Spear_Steel
+    _name: 2
+    _price: 75
+    o_sprite: {fileID: 21300000, guid: bdd8a295ca01a864e840449c447c25a4, type: 3}
+    _material: 0
+    locked: 0
+  - _label: Spear_Copper
+    _name: 2
+    _price: 150
+    o_sprite: {fileID: 21300000, guid: 69d1639047db07a4c80c5eb6aabd1569, type: 3}
+    _material: 1
+    locked: 0
+  - _label: Spear_Iron
+    _name: 2
+    _price: 225
+    o_sprite: {fileID: 21300000, guid: efebac67d8898174bbf183a6bf5b446d, type: 3}
+    _material: 2
+    locked: 0
+  - _label: Spear_Gold
+    _name: 2
+    _price: 300
+    o_sprite: {fileID: 21300000, guid: b07f9b4687a84da48a658bf9fe53f742, type: 3}
+    _material: 3
+    locked: 1
+  - _label: Spear_Diamond
+    _name: 2
+    _price: 375
+    o_sprite: {fileID: 21300000, guid: 50b68871ecd9d424b9aa8f86413eb612, type: 3}
+    _material: 4
+    locked: 1
+  - _label: Spear_Obsidian
+    _name: 2
+    _price: 450
+    o_sprite: {fileID: 21300000, guid: eb02234e3e4406e419cbf992b0300fb1, type: 3}
+    _material: 5
+    locked: 1
+  - _label: Arrow_Steel
+    _name: 3
+    _price: 100
+    o_sprite: {fileID: 21300000, guid: 9e56eccf0ecef75408f23f2c6d706c04, type: 3}
+    _material: 0
+    locked: 1
+  - _label: Arrow_Copper
+    _name: 3
+    _price: 200
+    o_sprite: {fileID: 21300000, guid: 4ef90bf697509f744a211463ae64d977, type: 3}
+    _material: 1
+    locked: 1
+  - _label: Arrow_Iron
+    _name: 3
+    _price: 300
+    o_sprite: {fileID: 21300000, guid: ffbe8435d18bb2b40bcd358ec316f0a0, type: 3}
+    _material: 2
+    locked: 1
+  - _label: Arrow_Gold
+    _name: 3
+    _price: 400
+    o_sprite: {fileID: 21300000, guid: 2d9f76c11b9a74f4bb1821bcb439b2c5, type: 3}
+    _material: 3
+    locked: 1
+  - _label: Arrow_Diamond
+    _name: 3
+    _price: 500
+    o_sprite: {fileID: 21300000, guid: a7e457382d2522b408ae884aaaa28f71, type: 3}
+    _material: 4
+    locked: 1
+  - _label: Arrow_Obsidian
+    _name: 3
+    _price: 600
+    o_sprite: {fileID: 21300000, guid: 4a3a7238ac702f6409924048309627bb, type: 3}
+    _material: 5
+    locked: 1
+  - _label: Claymore_Steel
+    _name: 4
+    _price: 125
+    o_sprite: {fileID: 21300000, guid: afa2ac711a3e0fa41a4ca2c049164dbd, type: 3}
+    _material: 0
+    locked: 1
+  - _label: Claymore_Copper
+    _name: 4
+    _price: 250
+    o_sprite: {fileID: 21300000, guid: 27cb247ff6381144abf2918469504561, type: 3}
+    _material: 1
+    locked: 1
+  - _label: Claymore_Iron
+    _name: 4
+    _price: 375
+    o_sprite: {fileID: 21300000, guid: 70de90cea2333034386a9fc88fff5ca8, type: 3}
+    _material: 2
+    locked: 1
+  - _label: Claymore_Gold
+    _name: 4
+    _price: 500
+    o_sprite: {fileID: 21300000, guid: 0a6b2b91afe3f4349a817b4f3e06ff38, type: 3}
+    _material: 3
+    locked: 1
+  - _label: Claymore_Diamond
+    _name: 4
+    _price: 625
+    o_sprite: {fileID: 21300000, guid: 1b74ed8bf70494542a163887efb50fa5, type: 3}
+    _material: 4
+    locked: 1
+  - _label: Claymore_Obsidian
+    _name: 4
+    _price: 750
+    o_sprite: {fileID: 21300000, guid: 62e2ee1f5fa01c74cacd704e09cb731c, type: 3}
+    _material: 5
+    locked: 1
