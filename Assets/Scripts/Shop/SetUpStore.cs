@@ -28,7 +28,7 @@ public class SetUpStore : MonoBehaviour
                      var _itemName = _storeCUI.transform.Find("Name").GetComponent<TextMeshProUGUI>();
                      var _itemIcon = _storeCUI.transform.Find("Icon").GetComponent<Image>();
                      var _buyingButton = _storeCUI.transform.Find("Purchase").GetComponent<Button>();
-                     var _price = _storeUI.transform.Find("Price").GetComponent<TextMeshProUGUI>();
+                     var _price = _storeUI.transform.Find("Purchase").transform.Find("Price").GetComponent<TextMeshProUGUI>();
                      var _purchase = _buyingButton.GetComponent<Purchase>();
 
                     _itemName.text = data.Label;
@@ -51,7 +51,7 @@ public class SetUpStore : MonoBehaviour
                     var _itemName = _storeUI.transform.Find("Name").GetComponent<TextMeshProUGUI>();
                     var _itemIcon = _storeUI.transform.Find("Icon").GetComponent<Image>();
                     var _buyingButton = _storeUI.transform.Find("Purchase").GetComponent<Button>();
-                    var _price = _storeUI.transform.Find("Price").GetComponent<TextMeshProUGUI>();
+                    var _price = _storeUI.transform.Find("Purchase").transform.Find("Price").GetComponent<TextMeshProUGUI>();
                     var _purchase = _buyingButton.GetComponent<Purchase>();
 
                     _itemName.text = data.Label;
