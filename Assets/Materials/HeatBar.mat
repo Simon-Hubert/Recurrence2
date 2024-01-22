@@ -47,6 +47,6 @@ Material:
     m_Floats:
     - _BorderSize: 0.17
     - _Health: 0
-    - _Heat: 1
+    - _Heat: 0.633145
     m_Colors: []
   m_BuildTextureStacks: []

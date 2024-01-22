@@ -53,7 +53,8 @@ public class ObjectDatabase : ScriptableObject
             for (int y = 0; y < originalTex.height; y++)
             {
                 Color brightness = originalTex.GetPixel(x,y);
-                Color newColor = col * brightness.r * brightness.a;
+                Color newColor = col * brightness.r;
+                newColor.a = brightness.a;
                 //Debug.Log(newColor);
                 newTex.SetPixel(x,y,newColor);
             }
