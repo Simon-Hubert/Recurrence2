@@ -51,5 +51,9 @@ public class GameManager : MonoBehaviour
         _progress.value = 0f;
         _timer = 0;
     }
+    public void Quit()
+    {
+        Application.Quit();
+    }
 
 }

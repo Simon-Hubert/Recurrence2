@@ -916,7 +916,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 64, y: 52.7}
+  m_AnchoredPosition: {x: 64, y: 52.69995}
   m_SizeDelta: {x: 30, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &335842010
@@ -952,13 +952,13 @@ MonoBehaviour:
   - _clip: {fileID: 8300000, guid: 4dcde7a104b610a429aaa24cb86cf8cf, type: 3}
     _name: Forge1
     _volume: 1
-    _pitch: 2
+    _pitch: 3
     _loop: 0
     _source: {fileID: 0}
   - _clip: {fileID: 8300000, guid: 4c551968f7cc378479de4f83cc6c0ad2, type: 3}
     _name: Forge
     _volume: 1
-    _pitch: 2
+    _pitch: 3
     _loop: 0
     _source: {fileID: 0}
   - _clip: {fileID: 8300000, guid: e6266a9e34ca21f47b86f94ec5a9e784, type: 3}
@@ -1566,7 +1566,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 403960522}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1804685505}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &403960522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6341,9 +6353,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Settings
-
-'
+  m_text: QUIT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
