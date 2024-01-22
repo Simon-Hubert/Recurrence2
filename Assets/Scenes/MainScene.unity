@@ -4904,6 +4904,7 @@ GameObject:
   - component: {fileID: 1681799790}
   - component: {fileID: 1681799789}
   - component: {fileID: 1681799788}
+  - component: {fileID: 1681799791}
   m_Layer: 5
   m_Name: BOUTONGAGNE
   m_TagString: Untagged
@@ -4986,30 +4987,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 335842011}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: PlayRand
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1691656490}
-        m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1681799789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5048,6 +5025,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1681799786}
   m_CullTransparentMesh: 1
+--- !u!114 &1681799791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681799786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bddd6fc404857b842abf2cdec56afe71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spritesTop:
+  - {fileID: -26707145, guid: 5754c58a0e2349845bfcd9c01e4f5bd5, type: 3}
+  - {fileID: -1304721267, guid: 5754c58a0e2349845bfcd9c01e4f5bd5, type: 3}
+  - {fileID: 2054830045, guid: 5754c58a0e2349845bfcd9c01e4f5bd5, type: 3}
+  - {fileID: 1226846581, guid: 5754c58a0e2349845bfcd9c01e4f5bd5, type: 3}
+  spritesBottom:
+  - {fileID: -1037145314, guid: 5754c58a0e2349845bfcd9c01e4f5bd5, type: 3}
+  - {fileID: -429439853, guid: 5754c58a0e2349845bfcd9c01e4f5bd5, type: 3}
+  - {fileID: -515630984, guid: 5754c58a0e2349845bfcd9c01e4f5bd5, type: 3}
+  - {fileID: 1329863155, guid: 5754c58a0e2349845bfcd9c01e4f5bd5, type: 3}
+  _background: {fileID: 1854292452}
+  _particleSystem: {fileID: 1691656490}
 --- !u!1 &1691656488
 GameObject:
   m_ObjectHideFlags: 0
@@ -10353,7 +10354,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 27.257996}
+  m_AnchoredPosition: {x: 0, y: 27.258057}
   m_SizeDelta: {x: 0, y: -245.48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1842031039
@@ -10405,7 +10406,6 @@ GameObject:
   - component: {fileID: 1854292451}
   - component: {fileID: 1854292453}
   - component: {fileID: 1854292452}
-  - component: {fileID: 1854292454}
   m_Layer: 5
   m_Name: BackGround
   m_TagString: Untagged
@@ -10452,7 +10452,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ce6fc8400e6e0304783df4f301810ba9, type: 3}
+  m_Sprite: {fileID: -26707145, guid: 5754c58a0e2349845bfcd9c01e4f5bd5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10470,28 +10470,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1854292450}
   m_CullTransparentMesh: 1
---- !u!114 &1854292454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1854292450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bddd6fc404857b842abf2cdec56afe71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spritesTop:
-  - {fileID: -26707145, guid: 5754c58a0e2349845bfcd9c01e4f5bd5, type: 3}
-  - {fileID: -1304721267, guid: 5754c58a0e2349845bfcd9c01e4f5bd5, type: 3}
-  - {fileID: 2054830045, guid: 5754c58a0e2349845bfcd9c01e4f5bd5, type: 3}
-  - {fileID: 1226846581, guid: 5754c58a0e2349845bfcd9c01e4f5bd5, type: 3}
-  spriteBottom:
-  - {fileID: -1037145314, guid: 5754c58a0e2349845bfcd9c01e4f5bd5, type: 3}
-  - {fileID: -429439853, guid: 5754c58a0e2349845bfcd9c01e4f5bd5, type: 3}
-  - {fileID: -515630984, guid: 5754c58a0e2349845bfcd9c01e4f5bd5, type: 3}
-  - {fileID: 1329863155, guid: 5754c58a0e2349845bfcd9c01e4f5bd5, type: 3}
 --- !u!1 &1921971033
 GameObject:
   m_ObjectHideFlags: 0
