@@ -377,6 +377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _materialDatabase: {fileID: 11400000, guid: 400b88a5201ab1c4baa13e3bdb20a168, type: 2}
+  _objectDatabase: {fileID: 0}
 --- !u!4 &615491983
 Transform:
   m_ObjectHideFlags: 0
@@ -767,7 +768,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00003624, y: 230}
+  m_AnchoredPosition: {x: 0.0000057224, y: 169}
   m_SizeDelta: {x: 577.9174, y: 81.2864}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1406582577
@@ -1366,7 +1367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 797200933e33d764ca6fea8234278623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _heat: {fileID: 569227767}
+  _heat: {fileID: 1406582577}
   _progress: {fileID: 867631280}
   _time: 10
   _maxProg: 50
@@ -1470,6 +1471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e89c0b7ca8611b479419ee6be580c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _gameManager: {fileID: 1804685505}
 --- !u!1 &1918274436
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private Slider _heat;
+    [SerializeField] private Image _heat;
     [SerializeField] private Slider _progress;
     [SerializeField] private float _time;
     [SerializeField] private int _maxProg;
@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
             ReInitLose();
         }
         else{
-            _heat.value = 1f-(_timer/_time);
+            _heat.material.SetFloat("_Heat", 1f-(_timer/_time));
         }
     }
     
