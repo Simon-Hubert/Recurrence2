@@ -919,6 +919,75 @@ RectTransform:
   m_AnchoredPosition: {x: 64, y: 52.7}
   m_SizeDelta: {x: 30, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &335842010
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 335842012}
+  - component: {fileID: 335842011}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &335842011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335842010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89305dd46b4daad4aa849690f38b2b79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sounds:
+  - _clip: {fileID: 8300000, guid: 4dcde7a104b610a429aaa24cb86cf8cf, type: 3}
+    _name: Forge1
+    _volume: 1
+    _pitch: 2
+    _loop: 0
+    _source: {fileID: 0}
+  - _clip: {fileID: 8300000, guid: 4c551968f7cc378479de4f83cc6c0ad2, type: 3}
+    _name: Forge
+    _volume: 1
+    _pitch: 2
+    _loop: 0
+    _source: {fileID: 0}
+  - _clip: {fileID: 8300000, guid: e6266a9e34ca21f47b86f94ec5a9e784, type: 3}
+    _name: Forge3
+    _volume: 1
+    _pitch: 2
+    _loop: 0
+    _source: {fileID: 0}
+  - _clip: {fileID: 8300000, guid: c05238ce4688d384c8072b5f2500108c, type: 3}
+    _name: Theme
+    _volume: 0.75
+    _pitch: 1
+    _loop: 1
+    _source: {fileID: 0}
+--- !u!4 &335842012
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335842010}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1250.0933, y: 390.07947, z: 6.2855005}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &346143559
 GameObject:
   m_ObjectHideFlags: 0
@@ -5166,6 +5235,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 335842011}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayRand
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1681799789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6474,3 +6555,4 @@ SceneRoots:
   - {fileID: 1804685509}
   - {fileID: 1334084969}
   - {fileID: 615491983}
+  - {fileID: 335842012}
